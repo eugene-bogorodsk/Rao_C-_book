@@ -1,0 +1,12 @@
+Rigel
+0.34 5 12.1 -8 15
+Aldebaran
+1.06 4 33 16 25
+Capella
+ 0.21 5 13 45 57
+Betelgeize
+ 0.92 5 52.5 7 24
+Sirius
+ 1.58 6 42.9 -16 39
+Procion
+ 0.48 7 36.7 5 21
