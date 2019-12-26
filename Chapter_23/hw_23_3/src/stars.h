@@ -35,6 +35,7 @@ public:
 	Star(const std::string& str,float _mg,int _ra_h,float _ra_min,int _d_dg,int _d_min);
 	~Star();
 	Star(const Star & st);
+	Star operator = (const Star & st);
 	void GetCatalog(std::ifstream & fm,const std::string & name);
 	void Set(const std::string & name);
 	void Show();

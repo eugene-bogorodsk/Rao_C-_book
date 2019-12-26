@@ -18,6 +18,7 @@ dc.degree=0;dc.minute=0;
 Star::Star(const std::string& str,float _mg,int _ra_h,float _ra_min,int _d_dg,int _d_min):
 		m_star_name(str),m_magnitude(_mg),ra({_ra_h,_ra_min}),dc({_d_dg,_d_min}){}
 
+
 Star::Star(const Star & st)
 {
 	m_star_name=st.m_star_name;
@@ -28,6 +29,19 @@ Star::Star(const Star & st)
 	dc.minute=st.dc.minute;
 }
 
+Star Star::operator = (const Star & st)
+{
+	if (this !=& st)
+	{
+		m_star_name=st.m_star_name;
+		m_magnitude=st.m_magnitude;
+		ra.hour=st.ra.hour;
+		ra.minute=st.ra.minute;
+		dc.degree=st.dc.degree;
+		dc.minute=st.dc.minute;
+	}
+	return *this;
+}
 void Star:: GetCatalog(std::ifstream & fm,const std::string & name)
 {
 	m_star_name=name;
